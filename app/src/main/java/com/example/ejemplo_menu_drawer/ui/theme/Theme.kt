@@ -1,4 +1,4 @@
-package com.example.aplicacionmovil_spacey.ui.theme
+package com.example.ejemplo_menu_drawer.ui.theme
 
 import android.app.Activity
 import android.os.Build
@@ -34,7 +34,7 @@ private val LightColorScheme = lightColorScheme(
 )
 
 @Composable
-fun AplicacionMovilSpaceYTheme(
+fun Ejemplo_Menu_DrawerTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
     dynamicColor: Boolean = true,

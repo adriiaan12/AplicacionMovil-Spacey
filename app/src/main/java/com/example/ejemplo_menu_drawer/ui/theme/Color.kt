@@ -1,4 +1,4 @@
-package com.example.aplicacionmovil_spacey.ui.theme
+package com.example.ejemplo_menu_drawer.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

@@ -1,4 +1,4 @@
-package com.example.aplicacionmovil_spacey
+package com.example.ejemplo_menu_drawer
 
 import org.junit.Test
 

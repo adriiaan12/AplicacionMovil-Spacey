@@ -14,9 +14,15 @@ import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.NavigationDrawerItem
 import androidx.compose.material3.NavigationDrawerItemDefaults
 import com.example.ejemplo_menu_drawer.ui.theme.Pink80
+import androidx.compose.runtime.*
+
 
 @Composable
 fun AppDrawer(onDestinationClicked: (String) -> Unit) {
+
+
+
+
     ModalDrawerSheet {
         Text("Menú", style = MaterialTheme.typography.titleLarge, modifier = Modifier.padding(16.dp))
 
@@ -34,10 +40,10 @@ fun AppDrawer(onDestinationClicked: (String) -> Unit) {
                 unselectedTextColor = MaterialTheme.colorScheme.onSurface
         ))
         NavigationDrawerItem(
-            label = { Text("Tareas") },
+            label = { Text("Reservas") },
             selected = false,
             onClick = { onDestinationClicked("tasks") },
-            icon = { Icon(Icons.Default.DateRange, contentDescription = "Tareas") },
+            icon = { Icon(Icons.Default.DateRange, contentDescription = "Reservas") },
             colors = NavigationDrawerItemDefaults.colors(
                 selectedContainerColor = MaterialTheme.colorScheme.primary.copy(alpha = 0.12f),
                 unselectedContainerColor = MaterialTheme.colorScheme.surface,
@@ -51,11 +57,31 @@ fun AppDrawer(onDestinationClicked: (String) -> Unit) {
         NavigationDrawerItem(
             label = { Text("Perfil") },
             selected = false,
-            onClick = { onDestinationClicked("profile") },
+
+            onClick = {
+
+                onDestinationClicked("profile")
+
+                      },
             icon = { Icon(Icons.Default.Person, contentDescription = "Perfil") },
             colors = NavigationDrawerItemDefaults.colors(
                 selectedContainerColor = Pink80, //MaterialTheme.colorScheme.primary.copy(alpha = 0.25f),
-                unselectedContainerColor = Pink80,  //MaterialTheme.colorScheme.surface,
+                unselectedContainerColor = MaterialTheme.colorScheme.surface,  //MaterialTheme.colorScheme.surface,
+                selectedIconColor = MaterialTheme.colorScheme.contentColorFor(backgroundColor = MaterialTheme.colorScheme.primary),
+                // Dame el color de contenido (texto/ícono) que combine con primary”.
+                unselectedIconColor = MaterialTheme.colorScheme.contentColorFor(backgroundColor = MaterialTheme.colorScheme.primary),
+                selectedTextColor = MaterialTheme.colorScheme.primary,
+                unselectedTextColor = MaterialTheme.colorScheme.onSurface
+            ),modifier = Modifier.padding(NavigationDrawerItemDefaults.ItemPadding))
+
+        NavigationDrawerItem(
+            label = { Text("Localizacion") },
+            selected = false,
+            onClick = { onDestinationClicked("profile") },
+            icon = { Icon(Icons.Default.Person, contentDescription = "Localizacion") },
+            colors = NavigationDrawerItemDefaults.colors(
+                selectedContainerColor = Pink80, //MaterialTheme.colorScheme.primary.copy(alpha = 0.25f),
+                unselectedContainerColor = MaterialTheme.colorScheme.surface,  //MaterialTheme.colorScheme.surface,
                 selectedIconColor = MaterialTheme.colorScheme.contentColorFor(backgroundColor = MaterialTheme.colorScheme.primary),
                 // Dame el color de contenido (texto/ícono) que combine con primary”.
                 unselectedIconColor = MaterialTheme.colorScheme.contentColorFor(backgroundColor = MaterialTheme.colorScheme.primary),

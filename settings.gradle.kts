@@ -19,5 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "AplicacionMovil-SpaceY"
+rootProject.name = "Ejemplo_Menu_Drawer"
 include(":app")
+ 
