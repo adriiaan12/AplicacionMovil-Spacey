@@ -16,6 +16,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 
 import com.example.ejemplo_menu_drawer.models.ViewModel_class
+import com.example.ejemplo_menu_drawer.ui.theme.Pink80
 
 @Composable
 fun TaskManagerApp() {
@@ -42,7 +43,9 @@ fun TaskManagerApp() {
 
 
     ModalNavigationDrawer(
+
         drawerState = drawerState,
+
         drawerContent = {
   //          AppDrawer: Es un composable que representa el menú lateral.
             //   Recibe una lambda onDestinationClicked que se ejecuta cuando el usuario
@@ -66,7 +69,9 @@ fun TaskManagerApp() {
                 }
             )
         }
-    ) {
+    )
+
+    {
   //      Estos composables se renderizan en función de la ruta activa del navController.
         NavHost(navController, startDestination = "home") {
             composable("home") { HomeScreen() }
