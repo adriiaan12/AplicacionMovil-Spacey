@@ -90,10 +90,10 @@ fun AppDrawer(onDestinationClicked: (String) -> Unit) {
             )
 
             NavigationDrawerItem(
-                label = { Text("Localizacion") },
+                label = { Text("Salas") },
                 selected = false,
-                onClick = { onDestinationClicked("profile") },
-                icon = { Icon(Icons.Default.Person, contentDescription = "Localizacion") },
+                onClick = { onDestinationClicked("Sala") },
+                icon = { Icon(Icons.Default.Person, contentDescription = "Salas") },
                 colors = NavigationDrawerItemDefaults.colors(
                     selectedContainerColor = Pink80, //MaterialTheme.colorScheme.primary.copy(alpha = 0.25f),
                     unselectedContainerColor = MaterialTheme.colorScheme.surface,  //MaterialTheme.colorScheme.surface,

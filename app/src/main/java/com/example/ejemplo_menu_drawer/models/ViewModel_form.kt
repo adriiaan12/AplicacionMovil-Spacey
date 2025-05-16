@@ -8,7 +8,7 @@ data class ViewModel_form(
     val nombre: String = "",
     val apellido1: String = "",
     val apellido2: String = "",
-    val dni: String = "",
+    val tlf: String = "",
     val email: String = "",
     val errorMensaje: String? = null,
     val envioExitoso: Boolean = false

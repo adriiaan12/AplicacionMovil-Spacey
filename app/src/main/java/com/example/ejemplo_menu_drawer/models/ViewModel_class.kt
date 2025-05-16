@@ -36,8 +36,8 @@ class ViewModel_class:ViewModel() {
         _uiState.update { it.copy(apellido2 = nuevoApellido2) }
     }
 
-    fun onDniChange(nuevoDni: String) {
-        _uiState.update { it.copy(dni = nuevoDni) }
+    fun onDniChange(nuevotlf: String) {
+        _uiState.update { it.copy(tlf = nuevotlf) }
     }
 
     fun onEmailChange(nuevoEmail: String) {
@@ -50,7 +50,7 @@ class ViewModel_class:ViewModel() {
         when {
             state.nombre.isBlank() -> setError("El nombre es obligatorio")
             state.apellido1.isBlank() -> setError("El primer apellido es obligatorio")
-            state.dni.length < 8 -> setError("El DNI debe tener al menos 8 caracteres")
+            state.tlf.length < 9 -> setError("El tlf debe tener al menos 9 caracteres")
             !emailRegex.matches(state.email) -> setError("El email no tiene un formato válido")
             else -> {
                 _uiState.update {

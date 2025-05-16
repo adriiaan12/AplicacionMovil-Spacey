@@ -59,9 +59,9 @@ fun TaskScreen(viewModel: ViewModel_class) {
         )
 
         TextField(
-            value = uiState.dni,
+            value = uiState.tlf,
             onValueChange = viewModel::onDniChange,
-            label = { Text("DNI") },
+            label = { Text("Numero de Telefono") },
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text),
             modifier = Modifier.fillMaxWidth()
         )
@@ -99,7 +99,7 @@ fun TaskScreen(viewModel: ViewModel_class) {
                         Nombre: ${uiState.nombre}
                         Apellido 1: ${uiState.apellido1}
                         Apellido 2: ${uiState.apellido2}
-                        DNI: ${uiState.dni}
+                        DNI: ${uiState.tlf}
                         Email: ${uiState.email}
                         """.trimIndent()
                     )

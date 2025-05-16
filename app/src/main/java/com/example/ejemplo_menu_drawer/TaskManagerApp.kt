@@ -16,6 +16,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 
 import com.example.ejemplo_menu_drawer.models.ViewModel_class
+import com.example.ejemplo_menu_drawer.ui.screens.SalaScreen
 import com.example.ejemplo_menu_drawer.ui.theme.Pink80
 
 @Composable
@@ -77,6 +78,7 @@ fun TaskManagerApp() {
             composable("home") { HomeScreen() }
             composable("tasks") { TaskScreen(viewModel) }
             composable("profile") { ProfileScreen() }
+            composable("Sala") { SalaScreen() }
         }
     }
 }
