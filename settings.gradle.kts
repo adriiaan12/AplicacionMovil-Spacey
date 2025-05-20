@@ -16,9 +16,10 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+   //     jcenter()
     }
 }
 
-rootProject.name = "Ejemplo_Menu_Drawer"
+rootProject.name = "Consumo_API"
 include(":app")
  

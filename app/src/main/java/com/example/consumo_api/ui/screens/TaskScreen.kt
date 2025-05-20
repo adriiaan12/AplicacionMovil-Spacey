@@ -5,7 +5,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
-
+import com.example.consumo_api.modules.Animal
+import com.example.consumo_api.modules.AnimalViewModel
 
 
 
@@ -15,6 +16,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLifecycleOwner
@@ -30,6 +32,7 @@ import com.example.consumo_api.models.ViewModel_class
 fun TaskScreen(viewModel: ViewModel_class) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
     val context = LocalContext.current
+    var enPeligro by remember { mutableStateOf(false) }
 
     Column(
         modifier = Modifier
@@ -76,10 +79,16 @@ fun TaskScreen(viewModel: ViewModel_class) {
         uiState.errorMensaje?.let {
             Text(text = it, color = MaterialTheme.colorScheme.error)
         }
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Checkbox(checked = enPeligro, onCheckedChange = { enPeligro = it })
+            Text("En peligro")
+        }
 
         Button(
             onClick = {
-                viewModel.validarYEnviar()
+                viewModel.agregarAnimal(
+                    Animal(0,uiState.nombre,uiState.apellido1,uiState.tlf.toInt(),uiState.apellido2,enPeligro)
+                )
             },
             modifier = Modifier.fillMaxWidth()
         ) {

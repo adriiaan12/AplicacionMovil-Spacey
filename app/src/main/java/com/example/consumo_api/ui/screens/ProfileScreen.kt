@@ -16,6 +16,10 @@ import androidx.compose.ui.unit.dp
 import com.example.consumo_api.modules.AnimalViewModel
 import com.example.consumo_api.AnimalDetailScreen
 import com.example.consumo_api.ListaAnimales
+import com.example.consumo_api.AnimalCreateScreen
+import com.example.consumo_api.AnimalUpdateScreen
+import com.example.consumo_api.AnimalPatchScreen
+import com.example.consumo_api.AnimalDeleteScreen
 
 
 @Composable
@@ -36,10 +40,10 @@ fun AnimalTabLayout(viewModel: AnimalViewModel = AnimalViewModel()) {
         when (selectedTab) {
             0 -> ListaAnimales(viewModel)   //GET All
             1 -> AnimalDetailScreen(viewModel) // GET Id
-            //2 -> AnimalCreateScreen(viewModel) //POST
-            //3 -> AnimalUpdateScreen(viewModel)  //PUT
-            //4 -> AnimalPatchScreen(viewModel)  //PATCH
-            //5 -> AnimalDeleteScreen(viewModel)  //DELETE
+            2 -> AnimalCreateScreen(viewModel) //POST
+            3 -> AnimalUpdateScreen(viewModel)  //PUT
+            4 -> AnimalPatchScreen(viewModel)  //PATCH
+            5 -> AnimalDeleteScreen(viewModel)  //DELETE
         }
         Text(viewModel.message, modifier = Modifier.padding(8.dp), color = Color.Green)
     }
