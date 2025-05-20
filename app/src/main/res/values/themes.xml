@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.Ejemplo_Menu_Drawer" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.Consumo_API" parent="android:Theme.Material.Light.NoActionBar" />
 </resources>

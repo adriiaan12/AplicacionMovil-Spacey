@@ -1,0 +1,6 @@
+<!-- res/xml/network_security_config.xml -->
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain>10.0.2.2</domain> <!-- IP del host desde el emulador -->
+    </domain-config>
+</network-security-config>

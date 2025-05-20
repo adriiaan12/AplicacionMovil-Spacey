@@ -1,3 +1,5 @@
+import org.gradle.kotlin.dsl.implementation
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -5,18 +7,21 @@ plugins {
 }
 
 android {
-    namespace = "com.example.ejemplo_menu_drawer"
-    compileSdk = 35
+    namespace = "com.example.consumo_api"
+    compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.ejemplo_menu_drawer"
-        minSdk = 30
-        targetSdk = 35
+        applicationId = "com.example.consumo_api"
+        minSdk = 25
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
+
+
+
 
     buildTypes {
         release {
@@ -39,6 +44,8 @@ android {
     }
 }
 
+
+
 dependencies {
 
     implementation(libs.androidx.core.ktx)
@@ -48,8 +55,11 @@ dependencies {
     implementation(libs.androidx.ui)
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
-    implementation("androidx.compose.material3:material3:1.2.1")
-    implementation("androidx.compose.ui:ui-text-google-fonts:1.6.0")
+    implementation(libs.androidx.material3)
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+
+    implementation(libs.logging.interceptor)
 
     implementation(libs.navigation.compose)
     testImplementation(libs.junit)
@@ -64,3 +74,16 @@ dependencies {
 
 
 }
+
+
+
+android {
+
+
+
+
+
+
+
+}
+
